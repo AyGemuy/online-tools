@@ -1,17 +1,8 @@
-body, html, h2 {
-  text-align: center;
-  min-height: 100vh;
-  background-color: #bdd4e7;
-  background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
-  border-radius: 5px;
-  box-shadow: 0 3px 15px #b8c6db;
-  -moz-box-shadow: 0 3px 15px #b8c6db;
-  -webkit-box-shadow: 0 3px 15px #b8c6db;
-}
-
-h1{
-  font-family: 'Montserrat', sans-serif;
-  color: #efefef;
+body, html, h1, h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  color: #333;
 }
 
 a, a:visited {
@@ -165,19 +156,23 @@ a:hover, a.active {
 }
 
 textarea {
- max-width: 275px;
-  width: 100%;
-  cursor: pointer;
-  background-color: #eaeaeb;
-  border:none;
-  color:#6c6c6c;
-  font-size: 14px;
-  border-radius: 5px;
-  padding: 15px 45px 15px 15px;
-  font-family: 'Montserrat', sans-serif;
-  box-shadow: 0 3px 15px #b8c6db;
-  -moz-box-shadow: 0 3px 15px #b8c6db;
-  -webkit-box-shadow: 0 3px 15px #b8c6db;
+  /*font-family:Consolas,'Lucida Console','DejaVu Sans Mono',monospace;*/
+  font-size: 12pt;
+  max-width: 95%;
+  width: 95%;
+  height: 200px;
+  border: 3px double #ccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #e0e0e0; /* Old browsers */
+  background: -moz-linear-gradient(top, #e0e0e0 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0e0e0), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e0e0e0 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e0e0e0 0%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e0e0e0 0%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #e0e0e0 0%,#ffffff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 ::-webkit-input-placeholder { 
@@ -208,15 +203,25 @@ textarea {
 }
 
 .btn {
-  width:40px;
-  background-color: #eaeaeb;
-  font-size: 18px;
-  padding: 6px 9px;
-  border-radius: 5px;
-  border:none;
-  color:#6c6c6c;
-  margin-left:-50px;
-  transition: all .4s;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 .btn:focus,
 .btn:active:focus,
@@ -224,14 +229,15 @@ textarea {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline:none;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  transform: scale(1.3);
-  color:#1a1a1a;
-  cursor:pointer;
+  color: #333;
+  text-decoration: none;
 }
 .btn:active,
 .btn.active {
